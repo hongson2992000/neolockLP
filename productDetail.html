@@ -1,232 +1,231 @@
 <!-- This is an example component -->
-<div>
+<!DOCTYPE html>
+<html lang="en">
 
-    <!DOCTYPE html>
-    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoLock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    xs: "375px",
+                    // => @media (min-width: 640px) { ... }
+                    sm: "640px",
+                    // => @media (min-width: 640px) { ... }
 
-    <head>
-        <meta charset="UTF-8">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap'>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    screens: {
-                        xs: "375px",
-                        // => @media (min-width: 640px) { ... }
-                        sm: "640px",
-                        // => @media (min-width: 640px) { ... }
+                    md: "768px",
+                    // => @media (min-width: 768px) { ... }
 
-                        md: "768px",
-                        // => @media (min-width: 768px) { ... }
+                    lg: "1024px",
+                    // => @media (min-width: 1024px) { ... }
 
-                        lg: "1024px",
-                        // => @media (min-width: 1024px) { ... }
+                    xl: "1280px",
+                    // => @media (min-width: 1280px) { ... }
 
-                        xl: "1280px",
-                        // => @media (min-width: 1280px) { ... }
-
-                        xl1: "1600px",
-                        // => @media (min-width: 1536px) { ... }
-                    },
-                    extend: {
-                        colors: {
-                            clifford: '#da373d',
-                        }
+                    xl1: "1600px",
+                    // => @media (min-width: 1536px) { ... }
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
                     }
                 }
             }
-        </script>
+        }
+    </script>
 
-    </head>
+</head>
 
-    <body class="antialiased">
-        <nav class="w-full bg-white drop-shadow-md fixed top-0 left-0 right-0 z-50">
-            <div class="xl:flex xl:justify-between xl:items-center xs:max-lg:px-4 md:max:lg:px-10 lg:mx-10 xl:mx-16">
-                <div class="flex justify-between items-center h-[80px] drop-shadow-lg">
-                    <a title="Phần mềm neohome" href="/">
-                        <div class="flex">
-                            <img src="img/logolock1.svg" alt="neoHome" class="object-fill w-full h-12" />
-                        </div>
-                    </a>
-                    <div class="xl:hidden" onclick="Menu(this)">
-                        <button class="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border cursor-pointer" id="activeButton">
-                            <svg xmlns="https://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
+<body>
+    <nav class="w-full bg-white drop-shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="xl:flex xl:justify-between xl:items-center xs:max-lg:px-4 md:max:lg:px-10 lg:mx-10 xl:mx-16">
+            <div class="flex justify-between items-center h-[80px] drop-shadow-lg">
+                <a title="Phần mềm neohome" href="/">
+                    <div class="flex">
+                        <img src="img/logolock1.svg" alt="neoHome" class="object-fill w-full h-12" />
                     </div>
-                </div>
-                <div class="xs:hidden xl:flex xl:items-center pb-3 xs:text-left md:pb-0 lg:mb-2 md:mt-0 gap-2" id="navbar">
-                    <a href="#order-form" class="px-10 py-2 border-solid border-2 border-[#FF9200] bg-[#fff] rounded-lg">Mua hàng</a>
-                    <a href="#" class="px-10 py-2 border-solid border-2 border-[#FF9200] bg-[#FF9200] rounded-lg text-[#fff]">Đăng kí hội viên</a>
+                </a>
+                <div class="xl:hidden" onclick="Menu(this)">
+                    <button class="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border cursor-pointer" id="activeButton">
+                        <svg xmlns="https://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </nav>
-        <div class="xs:px-4 md:max:lg:px-10 lg:mx-10 xl:mx-16 xs:mt-28 xl:mt-32 xs:mb-2 xl:mb-24">
-            <!-- Breadcrumbs -->
-            <div>
-                <div class="flex items-center space-x-2 text-gray-400 text-sm">
-                    <a href="#" class="hover:underline hover:text-gray-600">Home</a>
-                    <span>
+            <div class="xs:hidden xl:flex xl:items-center pb-3 xs:text-left md:pb-0 lg:mb-2 md:mt-0 gap-2" id="navbar">
+                <a href="#" class="px-10 py-2 border-solid border-2 border-[#FF9200] bg-[#fff] rounded-lg">Mua hàng</a>
+                <a href="#" class="px-10 py-2 border-solid border-2 border-[#FF9200] bg-[#FF9200] rounded-lg text-[#fff]">Đăng kí hội viên</a>
+            </div>
+        </div>
+    </nav>
+    <div class="xs:px-4 md:max:lg:px-10 lg:mx-10 xl:mx-16 xs:mt-28 xl:mt-32 xs:mb-2 xl:mb-24">
+        <!-- Breadcrumbs -->
+        <div>
+            <div class="flex items-center space-x-2 text-gray-400 text-xs">
+                <a href="#" class="hover:underline hover:text-gray-600">Home</a>
+                <span>
             <svg class="h-5 w-5 leading-none text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </span>
-                    <a href="#" class="hover:underline hover:text-gray-600">Khóa cửa vân tay</a>
-                    <span>
+                <a href="#" class="hover:underline hover:text-gray-600">Khóa cửa vân tay</a>
+                <span>
             <svg class="h-5 w-5 leading-none text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </span>
-                    <span>POK79</span>
-                </div>
+                <span>POK79</span>
             </div>
-            <!-- ./ Breadcrumbs -->
-            <div class="mt-10">
-                <div class="grid sm:grid-cols-1 xl:grid-cols-2">
-                    <div class="col-span-1">
-                        <img src="img/lock6.svg" class="w-full h-[100%]" alt="...">
-                    </div>
-                    <div class="col-span-1 xs:mt-12 xl:mt-0 xl:px-8">
-                        <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">Ổ khóa vân tay thông minh POK79 neolock.</h2>
-                        <p class="text-gray-500 text-sm">By <a href="#" class="text-indigo-600 hover:underline">NeoTech Company</a></p>
+        </div>
+        <!-- ./ Breadcrumbs -->
+        <div class="mt-10">
+            <div class="grid xs:grid-cols-1 xl:grid-cols-2">
+                <div class="col-span-1">
+                    <img src="img/lock6.svg" class="w-full h-[100%]" alt="...">
+                </div>
+                <div class="col-span-1 xs:mt-12 xl:mt-0 xl:px-8">
+                    <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">Ổ khóa vân tay thông minh POK79 neolock.</h2>
+                    <p class="text-gray-500 text-xs">By <a href="#" class="text-indigo-600 hover:underline">NeoTech Company</a></p>
 
-                        <div class="flex items-center space-x-4 my-4">
-                            <div>
-                                <div class="rounded-lg bg-gray-100 flex py-2 px-3">
-                                    <span class="text-indigo-400 mr-1 mt-1">đ</span>
-                                    <span class="font-bold text-indigo-600 text-3xl">749.000</span>
-                                </div>
-                            </div>
-                            <div class="flex-1">
-                                <p class="text-green-500 text-xl font-semibold">Tiết kiệm 12%</p>
-                                <p class="text-gray-400 text-sm">Đã bao gồm thuế.</p>
+                    <div class="flex items-center space-x-4 my-4">
+                        <div>
+                            <div class="rounded-lg bg-gray-100 flex py-2 px-3">
+                                <span class="text-indigo-400 mr-1 mt-1">đ</span>
+                                <span class="font-bold text-indigo-600 text-3xl">749.000</span>
                             </div>
                         </div>
-                        <ul class="text-gray-500">
-                            <li>- Ổ khoá càng cua thông minh vân tay, qua app #neolock</li>
-                            <li>- Mở thông qua APP, vân tay (50 vân tay), khoá cơ</li>
-                            <li>- Chia sẻ quyền mở khoá không giới hạn qua eKey APP.</li>
-                            <li>- Xem lịch sử mở khoá</li>
-                            <li>- Pin sạc cổng Type-C và thời gian chờ lên đến 2-3 tháng
-                            </li>
-                        </ul>
-                        <div class="mt-6">
-                            <a href="#order-form" class="h-14 px-6 py-4 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white">
+                        <div class="flex-1">
+                            <p class="text-green-500 text-xl font-semibold">Tiết kiệm 12%</p>
+                            <p class="text-gray-400 text-xs">Đã bao gồm thuế.</p>
+                        </div>
+                    </div>
+                    <ul class="text-gray-500">
+                        <li>- Ổ khoá càng cua thông minh vân tay, qua app #neolock</li>
+                        <li>- Mở thông qua APP, vân tay (50 vân tay), khoá cơ</li>
+                        <li>- Chia sẻ quyền mở khoá không giới hạn qua eKey APP.</li>
+                        <li>- Xem lịch sử mở khoá</li>
+                        <li>- Pin sạc cổng Type-C và thời gian chờ lên đến 2-3 tháng
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#order-form" class="h-14 px-6 py-4 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white">
                                 Mua sản phẩm
                              </a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="xs:px-4 md:max:lg:px-10 lg:mx-10 xl:mx-16 xs:mt-28 xl:mt-32 xs:mb-2 xl:mb-24">
-            <iframe class="w-full sm:h-[20rem] lg:h-[40rem] sm:mt-6 lg:mt-12" width="560" height="315" src="https://www.youtube.com/embed/TfCaQibJGVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            <div class="xl:pb-14 text-center xs:mt-12 xl:mt-24">
-                <p class="font-bold xs:text-xl md:text-4xl xl:text-4xl text-[#1E1E1E]">
-                    Chức năng khóa càn cua thông minh - POK79
-                </p>
-                <div class="w-full mt-12">
-                    <img src="img/productDetail1.svg" class="object-fill w-full" alt="...">
+    </div>
+    <div class="xs:px-4 md:max:lg:px-10 lg:mx-10 xl:mx-16 xs:mt-28 xl:mt-32 xs:mb-2 xl:mb-24">
+        <iframe class="w-full xs:h-[20rem] lg:h-[40rem] xs:mt-6 lg:mt-12" width="560" height="315" src="https://www.youtube.com/embed/TfCaQibJGVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <div class="xl:pb-14 text-center xs:mt-12 xl:mt-24">
+            <p class="font-bold xs:text-xl md:text-4xl xl:text-4xl text-[#1E1E1E]">
+                Chức năng khóa càn cua thông minh - POK79
+            </p>
+            <div class="w-full mt-12">
+                <img src="img/productDetail1.svg" class="object-fill w-full" alt="...">
+            </div>
+            <div class="w-full mt-12">
+                <img src="img/productDetail2.svg" class="object-fill w-full" alt="...">
+            </div>
+            <div class="w-full mt-12">
+                <img src="img/productDetail3.svg" class="object-fill w-full" alt="...">
+            </div>
+            <div class="w-full mt-12">
+                <img src="img/productDetail4.svg" class="object-fill w-full" alt="...">
+            </div>
+            <div class="w-full mt-12">
+                <img src="img/productDetail5.svg" class="object-fill w-full" alt="...">
+            </div>
+        </div>
+        <div class="xl:pb-14 text-center mt-8">
+            <p class="font-bold xs:text-xl md:text-4xl xl:text-4xl text-[#1E1E1E]">
+                Với chính sách chiết khấu 30%
+            </p>
+            <div class="xl:pb-14 text-center mt-2">
+                <div class="grid xs:grid-cols-1 lg:grid-cols-2">
+                    <div class="xs:col-span-1 lg:col-span-1 w-full mt-12">
+                        <img src="img/banner4.svg" class="object-fill w-full" alt="...">
+                    </div>
+                    <div class="xs:col-span-2 lg:col-span-1 w-full mt-12 lg:h-[5px] xs:h-auto">
+                        <img src="img/banner7.svg" class="object-fill w-full" alt="...">
+                    </div>
                 </div>
-                <div class="w-full mt-12">
-                    <img src="img/productDetail2.svg" class="object-fill w-full" alt="...">
-                </div>
-                <div class="w-full mt-12">
-                    <img src="img/productDetail3.svg" class="object-fill w-full" alt="...">
-                </div>
-                <div class="w-full mt-12">
-                    <img src="img/productDetail4.svg" class="object-fill w-full" alt="...">
-                </div>
-                <div class="w-full mt-12">
-                    <img src="img/productDetail5.svg" class="object-fill w-full" alt="...">
+                <div class="w-full mt-10">
+                    <img src="img/banner5.svg" class="object-fill w-full" alt="...">
                 </div>
             </div>
-            <div class="xl:pb-14 text-center mt-8">
-                <p class="font-bold xs:text-xl md:text-4xl xl:text-4xl text-[#1E1E1E]">
-                    Với chính sách chiết khấu 30%
-                </p>
-                <div class="xl:pb-14 text-center mt-2">
-                    <div class="grid sm:grid-cols-1 lg:grid-cols-2">
-                        <div class="sm:col-span-1 lg:col-span-1 w-full mt-12">
-                            <img src="img/banner4.svg" class="object-fill w-full" alt="...">
+        </div>
+        <div class="xl:pb-14 mt-4 mb-12">
+            <p class="font-bold xs:text-xl md:text-4xl xl:text-4xl text-[#1E1E1E] text-center">
+                Thiết bị khoá thông minh cho ngôi nhà của bạn
+            </p>
+            <div class=" w-full grid xs:grid-cols-1 xl:grid-cols-3 xs:h-[75rem] md:h-[120rem] xl:h-[30rem] gap-4 mt-12 ">
+                <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[30rem]">
+                    <div>
+                        <div class="my-8 ">
+                            <p class="text-[#1E1E1E] text-7xl font-semibold ">neoG7S</p>
                         </div>
-                        <div class="sm:col-span-2 lg:col-span-1 w-full mt-12 lg:h-[5px] sm:h-auto">
-                            <img src="img/banner7.svg" class="object-fill w-full" alt="...">
+                        <hr class="bg-[#252526] h-2 text-[#252526] " style="height:10px; width: 7rem; border-width:0; color:#FF9200; background-color:#FF9200 " />
+                        <div class="mt-8 ">
+                            <a href="# " class="bg-[#fff] py-4 px-20 rounded-lg text-lg">Đặt hàng ngay</a>
                         </div>
                     </div>
-                    <div class="w-full mt-10">
-                        <img src="img/banner5.svg" class="object-fill w-full" alt="...">
+                    <div class=" absolute bottom-0 right-[7rem] w-[50%] ">
+                        <img src="img/product1.svg " class="object-fill w-full " alt="... ">
+                    </div>
+                </div>
+                <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[30rem]">
+                    <div>
+                        <div class="my-8 ">
+                            <p class="text-[#1E1E1E] text-7xl font-semibold ">neo3S</p>
+                        </div>
+                        <hr class="bg-[#252526] h-2 text-[#252526] " style="height:10px; width: 7rem; border-width:0; color:#FF9200; background-color:#FF9200 " />
+                        <div class="mt-8 ">
+                            <a href="# " class="bg-[#fff] py-4 px-20 rounded-lg text-lg">Đặt hàng ngay</a>
+                        </div>
+                    </div>
+                    <div class=" absolute bottom-0 right-[7rem] w-[60%] ">
+                        <img src="img/product2.svg " class="object-fill w-full " alt="... ">
+                    </div>
+                </div>
+                <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[30rem]">
+                    <div>
+                        <div class="my-8 ">
+                            <p class="text-[#1E1E1E] text-7xl font-semibold ">POK79</p>
+                        </div>
+                        <hr class="bg-[#252526] h-2 text-[#252526] " style="height:10px; width: 7rem; border-width:0; color:#FF9200; background-color:#FF9200 " />
+                        <div class="mt-8 ">
+                            <a href="# " class="bg-[#fff] py-4 px-20 rounded-lg text-lg">Đặt hàng ngay</a>
+                        </div>
+                    </div>
+                    <div class=" absolute bottom-0 right-[7rem] w-[55%] ">
+                        <img src="img/product3.svg " class="object-fill w-full " alt="... ">
                     </div>
                 </div>
             </div>
-            <div class="xl:pb-14 mt-4 mb-12">
-                <p class="font-bold xs:text-xl md:text-4xl xl:text-4xl text-[#1E1E1E] text-center">
-                    Thiết bị khoá thông minh cho ngôi nhà của bạn
-                </p>
-                <div class=" w-full grid xs:grid-cols-1 xl:grid-cols-3 xs:h-[75rem] md:h-[120rem] xl:h-[30rem] gap-4 mt-12 ">
-                    <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[30rem]">
-                        <div>
-                            <div class="my-8 ">
-                                <p class="text-[#1E1E1E] text-7xl font-semibold ">neoG7S</p>
-                            </div>
-                            <hr class="bg-[#252526] h-2 text-[#252526] " style="height:10px; width: 7rem; border-width:0; color:#FF9200; background-color:#FF9200 " />
-                            <div class="mt-8 ">
-                                <a href="# " class="bg-[#fff] py-4 px-20 rounded-lg text-lg">Đặt hàng ngay</a>
-                            </div>
+        </div>
+        <div id="authentication-modal " tabindex="-1 " aria-hidden="true " class="w-full h-full text-center">
+            <p class="xs:mt-40 xl:mt-10 font-bold xs:text-3xl lg:text-4xl xl:text-4xl text-[#FF9200] ">
+                Đăng ký thành viên
+            </p>
+            <div class="w-full flex items-center justify-center mt-14">
+                <!-- Modal content -->
+                <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[72vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
+                    <div class="flex flex-col lg:flex-row items-center w-full h-full ">
+                        <div class="md:w-[100%] md:h-full ">
+                            <img src="img/bannerRegister.svg " class="object-cover w-full h-full rounded-s-lg xs:rounded-tr-lg lg:rounded-tr-none " />
                         </div>
-                        <div class=" absolute bottom-0 right-[7rem] w-[50%] ">
-                            <img src="img/product1.svg " class="object-fill w-full " alt="... ">
-                        </div>
-                    </div>
-                    <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[30rem]">
-                        <div>
-                            <div class="my-8 ">
-                                <p class="text-[#1E1E1E] text-7xl font-semibold ">neo3S</p>
-                            </div>
-                            <hr class="bg-[#252526] h-2 text-[#252526] " style="height:10px; width: 7rem; border-width:0; color:#FF9200; background-color:#FF9200 " />
-                            <div class="mt-8 ">
-                                <a href="# " class="bg-[#fff] py-4 px-20 rounded-lg text-lg">Đặt hàng ngay</a>
-                            </div>
-                        </div>
-                        <div class=" absolute bottom-0 right-[7rem] w-[60%] ">
-                            <img src="img/product2.svg " class="object-fill w-full " alt="... ">
-                        </div>
-                    </div>
-                    <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[30rem]">
-                        <div>
-                            <div class="my-8 ">
-                                <p class="text-[#1E1E1E] text-7xl font-semibold ">POK79</p>
-                            </div>
-                            <hr class="bg-[#252526] h-2 text-[#252526] " style="height:10px; width: 7rem; border-width:0; color:#FF9200; background-color:#FF9200 " />
-                            <div class="mt-8 ">
-                                <a href="# " class="bg-[#fff] py-4 px-20 rounded-lg text-lg">Đặt hàng ngay</a>
-                            </div>
-                        </div>
-                        <div class=" absolute bottom-0 right-[7rem] w-[55%] ">
-                            <img src="img/product3.svg " class="object-fill w-full " alt="... ">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="authentication-modal " tabindex="-1 " aria-hidden="true " class="w-full h-full text-center">
-                <p class="xs:mt-40 xl:mt-10 font-bold xs:text-3xl lg:text-4xl xl:text-4xl text-[#FF9200] ">
-                    Đăng ký thành viên
-                </p>
-                <div class="w-full flex items-center justify-center mt-14">
-                    <!-- Modal content -->
-                    <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[72vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
-                        <div class="flex flex-col lg:flex-row items-center w-full h-full ">
-                            <div class="md:w-[100%] md:h-full ">
-                                <img src="img/bannerRegister.svg " class="object-cover w-full h-full rounded-s-lg xs:rounded-tr-lg lg:rounded-tr-none " />
-                            </div>
-                            <div class="xs:w-full xl:w-[45%] h-full p-4 md:p-8 ">
-                                <div class="flex items-center justify-between ">
-                                    <h1 class="font-semibold xs:text-2xl md:text-3xl text-[#1e1e1e] md:mb-0 ">Thông tin đăng ký</h1>
-                                    <button type="button " class="close-modal absolute right-3 top-3 !bg-transparent !outline-none !border-none !text-[#1e1e1e] hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center
+                        <div class="xs:w-full xl:w-[45%] h-full p-4 md:p-8 ">
+                            <div class="flex items-center justify-between ">
+                                <h1 class="font-semibold xs:text-2xl md:text-3xl text-[#1e1e1e] md:mb-0 ">Thông tin đăng ký</h1>
+                                <button type="button " class="close-modal absolute right-3 top-3 !bg-transparent !outline-none !border-none !text-[#1e1e1e] hover:bg-gray-200 hover:text-gray-900 rounded-lg text-xs p-1.5 inline-flex items-center
                     " data-modal-hide="authentication-modal ">
                                 <svg aria-hidden="true " class="w-5 h-5 " fill="currentColor " viewBox="0 0 20 20 "
                                     xmlns="http://www.w3.org/2000/svg ">
@@ -235,58 +234,58 @@
                                         clip-rule="evenodd "></path>
                                 </svg>
                             </button>
-                                </div>
-                                <div class="error my-3 h-1 " id="errorPartner "></div>
-                                <!-- Modal Form -->
-                                <div class="relative customer_contact xs:h-[17rem] md:h-[20rem] lg:h-[30rem] xl:h-[25rem] rounded-lg flex justify-center items-center ">
-                                    <div class="w-full ">
-                                        <div class="error my-3 h-1" id="errorContact "></div>
-                                        <form action="/send-mail " method="POST " id="formDemo " novalidate class="w-full flex flex-col justify-between " autocomplete="off ">
-                                            <div class="text-[#1E1E1E80] leading-10 h-[50%]  w-full">
-                                                <div class="h-full flex-col justify-between grid xs:grid-cols-1 xl:grid-cols-1 leading-4 ">
-                                                    <div class="mb-3 px-2 col-span-1 form-control ">
-                                                        <input name="fullname " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="fullname_demo " type="text " placeholder="Nhập họ và tên ">
-                                                    </div>
-
-                                                    <div class="mb-3 px-2 col-span-1 form-control ">
-                                                        <input name="phone " type="number " class="w-full border border-gray-200 rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="phone_demo " type="text
-                    " placeholder="Nhập số điện thoại ">
-                                                    </div>
-
-                                                    <div class="mb-3 px-2 col-span-1 form-control ">
-                                                        <input name="email " type="email " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="email_demo " type="text " placeholder="Nhập email ">
-                                                    </div>
-                                                    <div class="px-2 col-span-1 form-control ">
-                                                        <input name="note " type="text " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="note_demo " type="text " placeholder="Mã giới thiệu ">
-                                                    </div>
+                            </div>
+                            <div class="error my-3 h-1 " id="errorPartner "></div>
+                            <!-- Modal Form -->
+                            <div class="relative customer_contact xs:h-[17rem] md:h-[20rem] lg:h-[30rem] xl:h-[25rem] rounded-lg flex justify-center items-center ">
+                                <div class="w-full ">
+                                    <div class="error my-3 h-1" id="errorContact "></div>
+                                    <form action="/send-mail " method="POST " id="formDemo " novalidate class="w-full flex flex-col justify-between " autocomplete="off ">
+                                        <div class="text-[#1E1E1E80] leading-10 h-[50%]  w-full">
+                                            <div class="h-full flex-col justify-between grid xs:grid-cols-1 xl:grid-cols-1 leading-4 ">
+                                                <div class="mb-3 px-2 col-span-1 form-control ">
+                                                    <input name="fullname " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="fullname_demo " type="text " placeholder="Nhập họ và tên ">
                                                 </div>
 
+                                                <div class="mb-3 px-2 col-span-1 form-control ">
+                                                    <input name="phone " type="number " class="w-full border border-gray-200 rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="phone_demo " type="text
+                    " placeholder="Nhập số điện thoại ">
+                                                </div>
+
+                                                <div class="mb-3 px-2 col-span-1 form-control ">
+                                                    <input name="email " type="email " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="email_demo " type="text " placeholder="Nhập email ">
+                                                </div>
+                                                <div class="px-2 col-span-1 form-control ">
+                                                    <input name="note " type="text " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="note_demo " type="text " placeholder="Mã giới thiệu ">
+                                                </div>
                                             </div>
-                                            <div class="flex justify-end items-center col-span-2 md:h-[2vh] lg:h-[50px] xs:mt-0 md:mt-2 lg:mt-32 xl:mt-2 lg:mb-1 px-2 ">
-                                                <button type="submit " class="xs:text-sm lg:text-lg py-2 px-6 rounded font-normal !bg-[#FF9900] border-none leading-tight xs:mt-2 ">Gửi
+
+                                        </div>
+                                        <div class="flex justify-end items-center col-span-2 md:h-[2vh] lg:h-[50px] xs:mt-0 md:mt-2 lg:mt-32 xl:mt-2 lg:mb-1 px-2 ">
+                                            <button type="submit " class="xs:text-xs lg:text-lg py-2 px-6 rounded font-normal !bg-[#FF9900] border-none leading-tight xs:mt-2 ">Gửi
                 đăng
                 ký</button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="order-form" tabindex="-1 " aria-hidden="true " class="w-full h-full text-center">
-                <p class="xs:mt-10 xl:mt-10 font-bold xs:text-3xl lg:text-4xl xl:text-4xl text-[#5271FF] ">
-                    Đặt hàng POK79 - Khóa càng cua thông minh
-                </p>
-                <div class="w-full flex items-center justify-center mt-14 mb-16">
-                    <!-- Modal content -->
-                    <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[72vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
-                        <div class="flex flex-col lg:flex-row items-center w-full h-full ">
-                            <div class="xs:w-full xl:w-[45%] h-full p-4 md:p-8 ">
-                                <div class="flex items-center justify-between ">
-                                    <h1 class="font-semibold xs:text-2xl md:text-3xl text-[#1e1e1e] md:mb-0 ">Thông tin mua hàng</h1>
-                                    <button type="button " class="close-modal absolute right-3 top-3 !bg-transparent !outline-none !border-none !text-[#1e1e1e] hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center
+        </div>
+        <div id="order-form" tabindex="-1 " aria-hidden="true " class="w-full h-full text-center">
+            <p class="xs:mt-10 xl:mt-10 font-bold xs:text-3xl lg:text-4xl xl:text-4xl text-[#5271FF] ">
+                Đặt hàng POK79 - Khóa càng cua thông minh
+            </p>
+            <div class="w-full flex items-center justify-center mt-14 mb-16">
+                <!-- Modal content -->
+                <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[72vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
+                    <div class="flex flex-col lg:flex-row items-center w-full h-full ">
+                        <div class="xs:w-full xl:w-[45%] h-full p-4 md:p-8 ">
+                            <div class="flex items-center justify-between ">
+                                <h1 class="font-semibold xs:text-2xl md:text-3xl text-[#1e1e1e] md:mb-0 ">Thông tin mua hàng</h1>
+                                <button type="button " class="close-modal absolute right-3 top-3 !bg-transparent !outline-none !border-none !text-[#1e1e1e] hover:bg-gray-200 hover:text-gray-900 rounded-lg text-xs p-1.5 inline-flex items-center
                     " data-modal-hide="authentication-modal ">
                                 <svg aria-hidden="true " class="w-5 h-5 " fill="currentColor " viewBox="0 0 20 20 "
                                     xmlns="http://www.w3.org/2000/svg ">
@@ -295,112 +294,111 @@
                                         clip-rule="evenodd "></path>
                                 </svg>
                             </button>
-                                </div>
-                                <div class="error my-3 h-1 " id="errorPartner "></div>
-                                <!-- Modal Form -->
-                                <div class="relative customer_contact xs:h-[20rem] md:h-[20rem] lg:h-[30rem] xl:h-[25rem] rounded-lg flex justify-center items-center ">
-                                    <div class="w-full ">
-                                        <div class="error my-3 h-1" id="errorContact "></div>
-                                        <form action="/send-mail " method="POST " id="formDemo " novalidate class="w-full flex flex-col justify-between " autocomplete="off ">
-                                            <div class="text-[#1E1E1E80] leading-10 h-[50%]  w-full">
-                                                <div class="h-full flex-col justify-between grid xs:grid-cols-1 xl:grid-cols-1 leading-4 ">
-                                                    <div class="mb-3 px-2 col-span-1 form-control ">
-                                                        <input name="fullname " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="fullname_demo " type="text " placeholder="Nhập họ và tên ">
-                                                    </div>
-
-                                                    <div class="mb-3 px-2 col-span-1 form-control ">
-                                                        <input name="phone " type="number " class="w-full border border-gray-200 rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="phone_demo " type="text
-                    " placeholder="Nhập số điện thoại ">
-                                                    </div>
-
-                                                    <div class="mb-3 px-2 col-span-1 form-control ">
-                                                        <input name="address " type="email " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="email_demo " type="text " placeholder="Nhập địa chỉ ">
-                                                    </div>
-                                                    <div class="px-2 col-span-1 form-control ">
-                                                        <input name="note " type="text " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="note_demo " type="text " placeholder="Mã giới thiệu ">
-                                                    </div>
-                                                    <div class="flex px-2 mt-2 text-[#000000] space-x-2">
-                                                        <p class="pr-4">Phương thức thanh toán</p>
-                                                        <input type="checkbox" title="COD">
-                                                        <p>COD</p>
-                                                        <input type="checkbox" title="Online">
-                                                        <p>Online</p>
-                                                    </div>
+                            </div>
+                            <div class="error my-3 h-1 " id="errorPartner "></div>
+                            <!-- Modal Form -->
+                            <div class="relative customer_contact xs:h-[20rem] md:h-[20rem] lg:h-[30rem] xl:h-[25rem] rounded-lg flex justify-center items-center ">
+                                <div class="w-full ">
+                                    <div class="error my-3 h-1" id="errorContact "></div>
+                                    <form action="/send-mail " method="POST " id="formDemo " novalidate class="w-full flex flex-col justify-between " autocomplete="off ">
+                                        <div class="text-[#1E1E1E80] leading-10 h-[50%]  w-full">
+                                            <div class="h-full flex-col justify-between grid xs:grid-cols-1 xl:grid-cols-1 leading-4 ">
+                                                <div class="mb-3 px-2 col-span-1 form-control ">
+                                                    <input name="fullname " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="fullname_demo " type="text " placeholder="Nhập họ và tên ">
                                                 </div>
 
+                                                <div class="mb-3 px-2 col-span-1 form-control ">
+                                                    <input name="phone " type="number " class="w-full border border-gray-200 rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="phone_demo " type="text
+                    " placeholder="Nhập số điện thoại ">
+                                                </div>
+
+                                                <div class="mb-3 px-2 col-span-1 form-control ">
+                                                    <input name="address " type="email " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="email_demo " type="text " placeholder="Nhập địa chỉ ">
+                                                </div>
+                                                <div class="px-2 col-span-1 form-control ">
+                                                    <input name="note " type="text " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="note_demo " type="text " placeholder="Mã giới thiệu ">
+                                                </div>
+                                                <div class="flex px-2 mt-2 text-[#000000] space-x-2">
+                                                    <p class="pr-4">Phương thức thanh toán</p>
+                                                    <input type="checkbox" title="COD">
+                                                    <p>COD</p>
+                                                    <input type="checkbox" title="Online">
+                                                    <p>Online</p>
+                                                </div>
                                             </div>
-                                            <div class="flex justify-end items-center col-span-2 md:h-[3vh] lg:h-[50px] xs:mt-0 md:mt-2 lg:mt-32 xl:mt-2 lg:mb-1 px-2 xs:mb-6 lg:mb-0">
-                                                <button type="submit " class="xs:text-sm lg:text-lg py-2 px-6 rounded font-normal !bg-[#5271FF] border-none leading-tight xs:mt-2 ">Gửi
+
+                                        </div>
+                                        <div class="flex justify-end items-center col-span-2 md:h-[3vh] lg:h-[50px] xs:mt-0 md:mt-2 lg:mt-32 xl:mt-2 lg:mb-1 px-2 xs:mb-6 lg:mb-0">
+                                            <button type="submit " class="xs:text-xs lg:text-lg py-2 px-6 rounded font-normal !bg-[#5271FF] border-none leading-tight xs:mt-2 ">Gửi
                 đăng
                 ký</button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="md:w-[100%] md:h-full ">
-                                <img src="img/OrderLockBG.svg " class="object-cover w-full h-full rounded-s-lg xs:rounded-tr-lg lg:rounded-tr-none " />
-                            </div>
-
                         </div>
+                        <div class="md:w-[100%] md:h-full ">
+                            <img src="img/OrderLockBG.svg " class="object-cover w-full h-full rounded-s-lg xs:rounded-tr-lg lg:rounded-tr-none " />
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="bg-[#1E1E1E] ">
-            <a href="/ ">
-                <div class="xs:mx-10 md:mx-10 lg:mx-10 xl:mx-16 py-10 flex justify-start ">
-                    <img src="img/logolock2.svg " alt="neoHome " width={250} height={100} />
-                </div>
-            </a>
-            <div class="bg-[#1E1E1E] grid xs:grid-cols-1 lg:grid-cols-7 xl:grid-cols-7 leading-10 text-[#FFFFFF80] xs:mx-10 lg:mx-10 xl:mx-16 ">
-                <div class="lg:col-span-3 xl:col-span-3 w-full py-4 ">
-                    <div class="xs:grid-cols-1 xl:grid-cols-2 ">
-                        <ul class="space-y-6 ">
-                            <li>Địa chỉ: 30 Hoa Lan, Phường 02, Quận Phú Nhuận, Tp HCM</li>
-                            <li>Hotline: 0902 978 179</li>
-                            <li>Hotline kỹ thuật : 0902 978179 - 0902.395288</li>
-                            <li>Email : info@neolock.vn</li>
-                            <li class="w-[90%] ">Công ty TNHH TMDV Công Nghệ NEO - NeoTech Số ĐKKD: 0316748419 cấp ngày 15/03/2021 tại Sở Kế Hoạch và Đầu Tư Tp Hồ Chí Minh</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="xs:col-span-2 lg:col-span-2 xl:col-span-2 lg:mx-0 py-4 ">
-                    <div class="text-[#FFFFFF] font-bold ">Liên kết</div>
-                    <ul>
-                        <li><a title="Về chúng tôi " href="https://www.neohome.vn/ve-chung-toi ">Giới thiệu</li>
-                        <li><a title="Liên hệ " href="https://www.neohome.vn/lien-he ">Liên hệ</li>
-                        <li><a title="Chính sách bảo mật " href="https://www.neohome.vn/chinh-sach ">Đăng ký đại lý</a></li>
-                        <li><a title="Đối tác " href="https://www.neohome.vn/doi-tac ">Chính sách bảo hành</li>
-                        <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Chính sách bảo mật</a></li>
-                        <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Khóa từ khách sạn</a></li>
-                        <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Khóa của vân tay qua APP</a></li>
-                        <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Free P2P payment API</a></li>
-                        <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Smart lock API/SDK</a></li>
-                        <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Blockchain - APP developmet service</a></li>
+    </div>
+    <div class="bg-[#1E1E1E] ">
+        <a href="/ ">
+            <div class="xs:mx-10 md:mx-10 lg:mx-10 xl:mx-16 py-10 flex justify-start ">
+                <img src="img/logolock2.svg " alt="neoHome " width={250} height={100} />
+            </div>
+        </a>
+        <div class="bg-[#1E1E1E] grid xs:grid-cols-1 lg:grid-cols-7 xl:grid-cols-7 leading-10 text-[#FFFFFF80] xs:mx-10 lg:mx-10 xl:mx-16 ">
+            <div class="lg:col-span-3 xl:col-span-3 w-full py-4 ">
+                <div class="xs:grid-cols-1 xl:grid-cols-2 ">
+                    <ul class="space-y-6 ">
+                        <li>Địa chỉ: 30 Hoa Lan, Phường 02, Quận Phú Nhuận, Tp HCM</li>
+                        <li>Hotline: 0902 978 179</li>
+                        <li>Hotline kỹ thuật : 0902 978179 - 0902.395288</li>
+                        <li>Email : info@neolock.vn</li>
+                        <li class="w-[90%] ">Công ty TNHH TMDV Công Nghệ NEO - NeoTech Số ĐKKD: 0316748419 cấp ngày 15/03/2021 tại Sở Kế Hoạch và Đầu Tư Tp Hồ Chí Minh</li>
                     </ul>
                 </div>
-                <div class="xs:col-span-2 xl:col-span-2 py-4 lg:mx-0 ">
-                    <div class="lg:text-2xl xl:text-4xl text-[#FFFFFF] font-bold ">Đăng ký</div>
-                    <div class="text-[16px] text-[#FFFFFF] ">Nhận thông tin mới nhất từ neoHome</div>
-                    <div class="lg:text-sm xl:text-[16px] flex rounded bg-white py-1 px-1 lg:h-12 xs:w-80 lg:w-64 xl:w-80 xl:h-12 ">
-                        <input type="text " placeholder="Nhập email đăng ký " class="rounded flex-grow border-none bg-transparent xl:px-3 text-[#1e1e1e] outline-none lg:w-10 " />
-                        <a class="bg-orange xs:px-6 lg:px-4 xl:px-8 xl:py-4 hover:opacity-90 rounded bg-[#FF9200] text-sm flex justify-center items-center text-[#fff] ">
+            </div>
+            <div class="xs:col-span-2 lg:col-span-2 xl:col-span-2 lg:mx-0 py-4 ">
+                <div class="text-[#FFFFFF] font-bold ">Liên kết</div>
+                <ul>
+                    <li><a title="Về chúng tôi " href="https://www.neohome.vn/ve-chung-toi ">Giới thiệu</li>
+                        <li><a title="Liên hệ " href="https://www.neohome.vn/lien-he ">Liên hệ</li>
+                        <li><a title="Chính sách bảo mật " href="https://www.neohome.vn/chinh-sach ">Đăng ký đại lý</a></li>
+                    <li><a title="Đối tác " href="https://www.neohome.vn/doi-tac ">Chính sách bảo hành</li>
+                        <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Chính sách bảo mật</a></li>
+                    <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Khóa từ khách sạn</a></li>
+                    <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Khóa của vân tay qua APP</a></li>
+                    <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Free P2P payment API</a></li>
+                    <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">xsart lock API/SDK</a></li>
+                    <li><a title="Tài liệu hướng dẫn " href="https://www.neohome.vn/tai-lieu ">Blockchain - APP developmet service</a></li>
+                </ul>
+            </div>
+            <div class="xs:col-span-2 xl:col-span-2 py-4 lg:mx-0 ">
+                <div class="lg:text-2xl xl:text-4xl text-[#FFFFFF] font-bold ">Đăng ký</div>
+                <div class="text-[16px] text-[#FFFFFF] ">Nhận thông tin mới nhất từ neoHome</div>
+                <div class="lg:text-xs xl:text-[16px] flex rounded bg-white py-1 px-1 lg:h-12 xs:w-80 lg:w-64 xl:w-80 xl:h-12 ">
+                    <input type="text " placeholder="Nhập email đăng ký " class="rounded flex-grow border-none bg-transparent xl:px-3 text-[#1e1e1e] outline-none lg:w-10 " />
+                    <a class="bg-orange xs:px-6 lg:px-4 xl:px-8 xl:py-4 hover:opacity-90 rounded bg-[#FF9200] text-xs flex justify-center items-center text-[#fff] ">
                             Đăng ký
                         </a>
-                    </div>
-                    <div class="text-[16px] text-[#FFFFFF] mt-2 ">Trang mạng xã hội</div>
-                    <div class="text-[16px] text-[#FFFFFF] flex items-center mt-2 ">
+                </div>
+                <div class="text-[16px] text-[#FFFFFF] mt-2 ">Trang mạng xã hội</div>
+                <div class="text-[16px] text-[#FFFFFF] flex items-center mt-2 ">
 
-                        <a href="https://www.facebook.com/profile.php?id=100063457074072 "><svg
+                    <a href="https://www.facebook.com/profile.php?id=100063457074072 "><svg
                                 xmlns="https://www.w3.org/2000/svg " viewBox="0 0 512 512 " class="w-6 h-6 ">
                                 <path fill="#FFFFFF80 "
                                     d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11
                     71.69h-57.78V501C413.31 482.38 504 379.78 504 256z " />
                             </svg></a>
 
-                        <a href="# "><svg xmlns="https://www.w3.org/2000/svg " viewBox="0 0 512 512 " class="w-6 h-6 ml-2 ">
+                    <a href="# "><svg xmlns="https://www.w3.org/2000/svg " viewBox="0 0 512 512 " class="w-6 h-6 ml-2 ">
                                 <path fill="#FFFFFF80 "
                                     d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772
                     6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655
@@ -408,64 +406,59 @@
                     41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z " />
                             </svg></a>
 
-                        <a href="# "><svg xmlns="https://www.w3.org/2000/svg " viewBox="0 0 640 512 " class="w-6 h-6 ml-2 ">
+                    <a href="# "><svg xmlns="https://www.w3.org/2000/svg " viewBox="0 0 640 512 " class="w-6 h-6 ml-2 ">
                                 <path fill="#FFFFFF80 "
                                     d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z " />
                             </svg></a>
 
-                        <a href="https://www.youtube.com/@neotechco "><svg xmlns="https://www.w3.org/2000/svg "
+                    <a href="https://www.youtube.com/@neotechco "><svg xmlns="https://www.w3.org/2000/svg "
                                 viewBox="0 0 576 512 " class="w-6 h-6 ml-2 ">
                                 <path fill="#FFFFFF80 "
                                     d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281
                     23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739
                     81.201z " />
                             </svg></a>
-                    </div>
-                    <div class="text-[16px] text-[#FFFFFF] flex items-center mt-2 ">
-                        <a href="https://www.dmca.com/compliance/neohome.vn " title="DMCA Compliance information for neohome.vn "><img src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-01.png " alt="DMCA compliant image " /></a>
-                    </div>
-
                 </div>
+                <div class="text-[16px] text-[#FFFFFF] flex items-center mt-2 ">
+                    <a href="https://www.dmca.com/compliance/neohome.vn " title="DMCA Compliance information for neohome.vn "><img src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-01.png " alt="DMCA compliant image " /></a>
+                </div>
+
             </div>
-            <div class=" text-[#FFFFFF] xs:text-sm ">
-                <div class="xs:mx-10 lg:mx-10 xl:mx-16 flex justify-between items-center my-6 ">
-                    <div class="flex justify-start items-center ">
-                        <div class="flex justify-center items-center ">
-                            <span>Tiếng Việt</span>
-                            <svg xmlns="https://www.w3.org/2000/svg " fill="none " viewBox="0 0 24 24 " strokeWidth={1.5} stroke="currentColor " class="xs:w-3 xs:h-3 lg:w-4 lg:h-4 ml-2 ">
+        </div>
+        <div class=" text-[#FFFFFF] xs:text-xs ">
+            <div class="xs:mx-10 lg:mx-10 xl:mx-16 flex justify-between items-center my-6 ">
+                <div class="flex justify-start items-center ">
+                    <div class="flex justify-center items-center ">
+                        <span>Tiếng Việt</span>
+                        <svg xmlns="https://www.w3.org/2000/svg " fill="none " viewBox="0 0 24 24 " strokeWidth={1.5} stroke="currentColor " class="xs:w-3 xs:h-3 lg:w-4 lg:h-4 ml-2 ">
                                 <path strokeLinecap="round " strokeLinejoin="round " d="M19.5 8.25l-7.5 7.5-7.5-7.5 " />
                             </svg>
-                        </div>
                     </div>
-                    <div>Version 1.1</div>
                 </div>
+                <div>Version 1.1</div>
             </div>
-            <hr class="bg-[#252526] h-1 text-[#252526] " style="height:2px; border-width:0; color:#FFFFFF26; background-color:#FFFFFF26 " />
-            <div class="text-[#FFFFFF80] py-3 ">
-                <div class="xs:text-center md:flex md:justify-between md:items-center md:mx-10 xl:mx-16 my-6 ">
-                    <div>
-                        <div class="flex xs:justify-center md:justify-start items-center ">
-                            <div>Sản phẩm của</div> <img src="/images/Layer 1.svg " alt="neoTech " class="ml-2 ">
-                        </div>
-                        <a title="Công ty giải pháp công nghệ NeoTech " href="https://www.neotech.com.vn "><span
-                                class="text-sm ">Công ty TNHH TMDV Công Nghệ NEO - NeoTech</span></a>
+        </div>
+        <hr class="bg-[#252526] h-1 text-[#252526] " style="height:2px; border-width:0; color:#FFFFFF26; background-color:#FFFFFF26 " />
+        <div class="text-[#FFFFFF80] py-3 ">
+            <div class="xs:text-center md:flex md:justify-between md:items-center md:mx-10 xl:mx-16 my-6 ">
+                <div>
+                    <div class="flex xs:justify-center md:justify-start items-center ">
+                        <div>Sản phẩm của</div> <img src="/images/Layer 1.svg " alt="neoTech " class="ml-2 ">
                     </div>
-                    <div class="flex justify-center items-center "><span>Copyright</span>
-                        <svg xmlns="https://www.w3.org/2000/svg " viewBox="0 0 512 512 " class="w-4 h-4 mx-1 ">
+                    <a title="Công ty giải pháp công nghệ NeoTech " href="https://www.neotech.com.vn "><span
+                                class="text-xs ">Công ty TNHH TMDV Công Nghệ NEO - NeoTech</span></a>
+                </div>
+                <div class="flex justify-center items-center "><span>Copyright</span>
+                    <svg xmlns="https://www.w3.org/2000/svg " viewBox="0 0 512 512 " class="w-4 h-4 mx-1 ">
                             <path fill="#FFFFFF80 "
                                 d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c-31.2-31.2-31.2-81.9 0-113.1s81.9-31.2 113.1 0c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9c-50-50-131-50-181 0s-50
                     131 0 181s131 50 181 0c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0c-31.2 31.2-81.9 31.2-113.1 0z " />
                         </svg>
-                        <span>2023 neolock.vn. All Rights Reserved</span>
-                    </div>
+                    <span>2023 neolock.vn. All Rights Reserved</span>
                 </div>
             </div>
         </div>
+    </div>
+</body>
 
-    </body>
-    <!-- partial -->
-    <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js'></script>
-
-    </html>
-
-</div>
+</html>
