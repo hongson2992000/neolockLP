@@ -162,7 +162,7 @@
                 </div>
             </div>
         </div>
-        <div class="xl:pb-14 mt-4 mb-12">
+        <div class="xl:pb-14 mt-8 mb-12">
             <p class="font-bold xs:text-xl md:text-4xl xl:text-4xl text-[#1E1E1E] text-center">
                 Thiết bị khoá thông minh cho ngôi nhà của bạn
             </p>
@@ -215,9 +215,9 @@
             <p class="xs:mt-40 xl:mt-10 font-bold xs:text-3xl lg:text-4xl xl:text-4xl text-[#FF9200] ">
                 Đăng ký thành viên
             </p>
-            <div class="w-full flex items-center justify-center mt-14">
+            <div class="w-full flex items-center justify-center mt-14 mb-16">
                 <!-- Modal content -->
-                <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[72vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
+                <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[92vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
                     <div class="flex flex-col lg:flex-row items-center w-full h-full ">
                         <div class="md:w-[100%] md:h-full ">
                             <img src="img/bannerRegister.svg " class="object-cover w-full h-full rounded-s-lg xs:rounded-tr-lg lg:rounded-tr-none " />
@@ -225,15 +225,15 @@
                         <div class="xs:w-full xl:w-[45%] h-full p-4 md:p-8 ">
                             <div class="flex items-center justify-between ">
                                 <h1 class="font-semibold xs:text-2xl md:text-3xl text-[#1e1e1e] md:mb-0 ">Thông tin đăng ký</h1>
-                                <button type="button " class="close-modal absolute right-3 top-3 !bg-transparent !outline-none !border-none !text-[#1e1e1e] hover:bg-gray-200 hover:text-gray-900 rounded-lg text-xs p-1.5 inline-flex items-center
-                    " data-modal-hide="authentication-modal ">
-                                <svg aria-hidden="true " class="w-5 h-5 " fill="currentColor " viewBox="0 0 20 20 "
-                                    xmlns="http://www.w3.org/2000/svg ">
-                                    <path fill-rule="evenodd "
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z "
-                                        clip-rule="evenodd "></path>
-                                </svg>
-                            </button>
+                                <button type="button " class="close-modal absolute right-3 top-3 !bg-transparent !outline-none !border-none !text-[#1e1e1e] hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center
+                " data-modal-hide="authentication-modal ">
+                            <svg aria-hidden="true " class="w-5 h-5 " fill="currentColor " viewBox="0 0 20 20 "
+                                xmlns="http://www.w3.org/2000/svg ">
+                                <path fill-rule="evenodd "
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z "
+                                    clip-rule="evenodd "></path>
+                            </svg>
+                        </button>
                             </div>
                             <div class="error my-3 h-1 " id="errorPartner "></div>
                             <!-- Modal Form -->
@@ -241,7 +241,7 @@
                                 <div class="w-full ">
                                     <div class="error my-3 h-1" id="errorContact "></div>
                                     <form action="/send-mail " method="POST " id="formDemo " novalidate class="w-full flex flex-col justify-between " autocomplete="off ">
-                                        <div class="text-[#1E1E1E80] leading-10 h-[50%]  w-full">
+                                        <div class="text-[#1E1E1E80] leading-10 h-auto w-full">
                                             <div class="h-full flex-col justify-between grid xs:grid-cols-1 xl:grid-cols-1 leading-4 ">
                                                 <div class="mb-3 px-2 col-span-1 form-control ">
                                                     <input name="fullname " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="fullname_demo " type="text " placeholder="Nhập họ và tên ">
@@ -249,7 +249,7 @@
 
                                                 <div class="mb-3 px-2 col-span-1 form-control ">
                                                     <input name="phone " type="number " class="w-full border border-gray-200 rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="phone_demo " type="text
-                    " placeholder="Nhập số điện thoại ">
+                " placeholder="Nhập số điện thoại ">
                                                 </div>
 
                                                 <div class="mb-3 px-2 col-span-1 form-control ">
@@ -262,9 +262,9 @@
 
                                         </div>
                                         <div class="flex justify-end items-center col-span-2 md:h-[2vh] lg:h-[50px] xs:mt-0 md:mt-2 lg:mt-32 xl:mt-2 lg:mb-1 px-2 ">
-                                            <button type="submit " class="xs:text-xs lg:text-lg py-2 px-6 rounded font-normal !bg-[#FF9900] border-none leading-tight xs:mt-2 ">Gửi
-                đăng
-                ký</button>
+                                            <button type="submit " class="xs:text-sm lg:text-lg py-2 px-6 rounded font-normal !bg-[#FF9900] border-none leading-tight xs:mt-2 ">Gửi
+            đăng
+            ký</button>
                                         </div>
                                     </form>
                                 </div>
@@ -280,7 +280,7 @@
             </p>
             <div class="w-full flex items-center justify-center mt-14 mb-16">
                 <!-- Modal content -->
-                <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[72vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
+                <div class="bg-white drop-shadow-md rounded-lg shadow xs:w-[90vw] lg:w-[55rem] xl:w-full xs:h-[80vh] md:h-[85vh] lg:h-[55vh] xl:h-[70vh] xl1:h-[60vh] relative ">
                     <div class="flex flex-col lg:flex-row items-center w-full h-full ">
                         <div class="xs:w-full xl:w-[45%] h-full p-4 md:p-8 ">
                             <div class="flex items-center justify-between ">
@@ -337,7 +337,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="md:w-[100%] md:h-full ">
+                        <div class="md:w-[100%] md:h-full xs:hidden xl:block">
                             <img src="img/OrderLockBG.svg " class="object-cover w-full h-full rounded-s-lg xs:rounded-tr-lg lg:rounded-tr-none " />
                         </div>
 
