@@ -177,7 +177,7 @@
                 Thiết bị khoá thông minh cho ngôi nhà của bạn
             </p>
             <div class=" w-full grid xs:grid-cols-1 xl:grid-cols-3 xs:h-[75rem] md:h-[120rem] xl:h-[30rem] gap-4 mt-12 ">
-                <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[30rem]">
+                <div class="col-span-1 bg-[#DADADA] rounded-lg relative flex justify-center xs:h-[26rem] md:h-[40rem] xl:h-[32rem]">
                     <div>
                         <div class="my-8 ">
                             <p class="text-[#1E1E1E] text-7xl font-semibold ">neoG7S</p>
@@ -222,8 +222,8 @@
             </div>
         </div>
         <div id="authentication-modal " tabindex="-1 " aria-hidden="true " class="w-full h-full text-center">
-            <p class="xs:mt-40 xl:mt-10 font-bold xs:text-3xl lg:text-4xl xl:text-4xl text-[#FF9200] ">
-                Đăng ký thành viên
+            <p class="xs:mt-40 xl:mt-10 font-bold xs:text-2xl lg:text-4xl xl:text-4xl text-[#FF9200] ">
+                Đăng ký đại lý cùng neolock để tăng thu nhập
             </p>
             <div class="w-full flex items-center justify-center mt-14 mb-16">
                 <!-- Modal content -->
@@ -307,7 +307,7 @@
                             </div>
                             <div class="error my-3 h-1 " id="errorPartner "></div>
                             <!-- Modal Form -->
-                            <div class="relative customer_contact xs:h-[20rem] md:h-[20rem] lg:h-[30rem] xl:h-[25rem] rounded-lg flex justify-center items-center ">
+                            <div class="relative customer_contact xs:h-[18rem] md:h-[18rem] lg:h-[30rem] xl:h-[25rem] rounded-lg flex justify-center items-center ">
                                 <div class="w-full ">
                                     <div class="error my-3 h-1" id="errorContact "></div>
                                     <form action="/send-mail " method="POST " id="formDemo " novalidate class="w-full flex flex-col justify-between " autocomplete="off ">
@@ -328,17 +328,16 @@
                                                 <div class="px-2 col-span-1 form-control ">
                                                     <input name="note " type="text " class="w-full border rounded py-3 px-4 mb-3 leading-tight bg-[#fff] focus:outline-none focus:bg-white " id="note_demo " type="text " placeholder="Mã giới thiệu ">
                                                 </div>
-                                                <div class="flex px-2 mt-2 text-[#000000] space-x-2">
-                                                    <p class="pr-4">Phương thức thanh toán</p>
-                                                    <input type="checkbox" title="COD" checked>
-                                                    <p>COD</p>
-                                                    <input type="checkbox" title="Online">
-                                                    <p>Online</p>
+                                                <div class="flex px-2 mt-2 text-[#000000] space-x-2 justify-end">
+                                                    <select name="payment" id="payment" class="border border-[#e5e7eb] rounded-md h-10 px-2">
+                                                        <option value="cod">Thanh toán khi nhận hàng</option>
+                                                        <option value="online">Thanh toán online</option>
+                                                      </select>
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <div class="flex justify-end items-center col-span-2 md:h-[3vh] lg:h-[50px] xs:mt-0 md:mt-2 lg:mt-32 xl:mt-2 lg:mb-1 px-2 xs:mb-6 lg:mb-0">
+                                        <div class="flex justify-end items-center col-span-2 md:h-[3vh] lg:h-[50px] xs:mt-0 md:mt-2 lg:mt-32 xl:mt-6 lg:mb-1 px-2 xs:mb-6 lg:mb-0">
                                             <button type="submit " class="xs:text-xs lg:text-lg py-2 px-6 rounded font-normal !bg-[#5271FF] border-none leading-tight xs:mt-2 ">Gửi
                 đăng
                 ký</button>
